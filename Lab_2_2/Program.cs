@@ -2,16 +2,16 @@
 
 namespace Lab_2_2
 {
-    internal class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("===== Тест Task1 =====");
+            Console.WriteLine("Тест Task1");
             double[] arr = { 3.5, -2.1, 4.7, 0.5, -7.3, 6.2, 1.1 };
             double a = -1, b = 2;
             Task1(arr, a, b);
 
-            Console.WriteLine("\n===== Тест Task2 =====");
+            Console.WriteLine("\nТест Task2");
             int[][] matrix =
             {
                 new int[] { 5, 0, -2, -4 },
@@ -21,7 +21,7 @@ namespace Lab_2_2
             };
             Task2(matrix);
 
-            Console.WriteLine("\n===== Тест Task3 =====");
+            Console.WriteLine("\nТест Task3");
             Console.WriteLine("Введіть рядок для Task3 (наприклад: \"Hello WORLD this IS test рядок\"):");
             Task3();
         }
