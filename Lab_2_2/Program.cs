@@ -6,6 +6,9 @@ namespace Lab_2_2
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
+            Console.InputEncoding = System.Text.Encoding.UTF8;
+
             Console.WriteLine("Тест Task1");
             double[] arr = { 3.5, -2.1, 4.7, 0.5, -7.3, 6.2, 1.1 };
             double a = -1, b = 2;
@@ -24,6 +27,8 @@ namespace Lab_2_2
             Console.WriteLine("\nТест Task3");
             Console.WriteLine("Введіть рядок для Task3 (наприклад: \"Hello WORLD this IS test рядок\"):");
             Task3();
+
+            LombardApp.RunLombard();
         }
 
         static void Task1(double[] array, double a, double b)
