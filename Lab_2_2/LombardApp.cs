@@ -13,9 +13,7 @@ namespace Lab_2_2
             while (true)
             {
                 Console.Clear();
-                Console.WriteLine("====================================");
-                Console.WriteLine("          ЛОМБАРД - МЕНЮ");
-                Console.WriteLine("====================================");
+                Console.WriteLine("ЛОМБАРД - МЕНЮ");
                 Console.WriteLine("1. Показати всі речі");
                 Console.WriteLine("2. Пошук по назві речі");
                 Console.WriteLine("3. Пошук по прізвищу власника");
@@ -23,7 +21,6 @@ namespace Lab_2_2
                 Console.WriteLine("5. Показати прострочені речі");
                 Console.WriteLine("6. Показати активні речі");
                 Console.WriteLine("0. Вихід");
-                Console.WriteLine("====================================");
                 Console.Write("Ваш вибір: ");
 
                 string choice = Console.ReadLine();

@@ -4,31 +4,88 @@ namespace Lab_2_2
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.OutputEncoding = System.Text.Encoding.UTF8;
-            Console.InputEncoding = System.Text.Encoding.UTF8;
+            Console.OutputEncoding = System.Text.Encoding.UTF8; Console.InputEncoding = System.Text.Encoding.UTF8;
 
-            Console.WriteLine("Тест Task1");
-            double[] arr = { 3.5, -2.1, 4.7, 0.5, -7.3, 6.2, 1.1 };
-            double a = -1, b = 2;
-            Task1(arr, a, b);
-
-            Console.WriteLine("\nТест Task2");
-            int[][] matrix =
+            while (true)
             {
-                new int[] { 5, 0, -2, -4 },
-                new int[] { -6, 3, 1, 8 },
-                new int[] { 7, -8, 0, -2 },
-                new int[] { 9, 4, -10, 11 }
-            };
-            Task2(matrix);
+                Console.Clear();
+                Console.WriteLine("МЕНЮ ЗАВДАНЬ");
+                Console.WriteLine("1. Виконати Task1 (масив double)");
+                Console.WriteLine("2. Виконати Task2 (матриця int)");
+                Console.WriteLine("3. Виконати Task3 (робота з рядком)");
+                Console.WriteLine("4. Відкрити Ломбард");
+                Console.WriteLine("0. Вихід");
+                Console.Write("Ваш вибір: ");
 
-            Console.WriteLine("\nТест Task3");
-            Console.WriteLine("Введіть рядок для Task3 (наприклад: \"Hello WORLD this IS test рядок\"):");
-            Task3();
+                string choice = Console.ReadLine();
 
-            LombardApp.RunLombard();
+                try
+                {
+                    switch (choice)
+                    {
+                        case "1":
+                            Console.WriteLine("\n--- Task1 ---");
+                            double[] arr = { 3.5, -2.1, 4.7, 0.5, -7.3, 6.2, 1.1 };
+
+                            foreach (var x in arr)
+                                Console.Write(x + " ");
+                            Console.WriteLine();
+
+                            double a = -1, b = 2;
+                            Task1(arr, a, b);
+                            break;
+
+                        case "2":
+                            Console.WriteLine("\n--- Task2 ---");
+                            int[][] matrix =
+                            {
+                                new int[] { 5, 0, -2, -4 },
+                                new int[] { -6, 3, 1, 8 },
+                                new int[] { 7, -8, 0, -2 },
+                                new int[] { 9, 4, -10, 11 }
+                            };
+
+                            Console.WriteLine("Початкова матриця:");
+                            foreach (var row in matrix)
+                            {
+                                foreach (var val in row)
+                                    Console.Write(val + "\t");
+                                Console.WriteLine();
+                            }
+
+                            Task2(matrix);
+                            break;
+
+                        case "3":
+                            Console.WriteLine("\n--- Task3 ---");
+                            Console.WriteLine("Введіть рядок для Task3:");
+                            Task3();
+                            break;
+
+                        case "4":
+                            Console.WriteLine("\n--- Ломбард ---");
+                            LombardApp.RunLombard();
+                            break;
+
+                        case "0":
+                            Console.WriteLine("Вихід з програми...");
+                            return;
+
+                        default:
+                            Console.WriteLine("Невірний вибір, спробуйте ще раз.");
+                            break;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Помилка: {ex.Message}");
+                }
+
+                Console.WriteLine("\nНатисніть будь-яку клавішу для продовження...");
+                Console.ReadKey();
+            }
         }
 
         static void Task1(double[] array, double a, double b)
