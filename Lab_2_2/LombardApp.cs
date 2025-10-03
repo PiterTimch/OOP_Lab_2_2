@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using Lab_2_2.Models;
 using Lab_2_2.Services;
 
 namespace Lab_2_2
@@ -84,7 +86,7 @@ namespace Lab_2_2
             }
         }
 
-        private static void ShowItems(System.Collections.Generic.List<Models.ItemModel> items, string title)
+        private static void ShowItems(List<ItemModel> items, string title)
         {
             Console.Clear();
             Console.WriteLine($"=== {title} ===");
@@ -102,7 +104,7 @@ namespace Lab_2_2
                 Console.WriteLine($"   Отримано: {item.ReceivedDate:d}");
                 Console.WriteLine($"   Безвідсотковий період до: {item.InterestFreePeriodEndDate:d}");
                 Console.WriteLine($"   Дедлайн: {item.DeathLineDate:d}");
-                Console.WriteLine($"   Відсоток/день: {item.InterestPerDay} грн\n");
+                Console.WriteLine($"   Відсоток/день: {item.InterestPerDay} %\n");
             }
         }
     }

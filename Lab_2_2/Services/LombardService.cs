@@ -36,23 +36,45 @@ namespace Lab_2_2.Services
 
             _items.Add(new ItemModel
             {
-                Name = "Золотий ланцюжок",
+                Name = "Золотий перстень",
                 Price = 5000,
                 ReceivedDate = DateTime.Now.AddDays(-10),
                 InterestFreePeriodEndDate = DateTime.Now.AddDays(-5),
                 DeathLineDate = DateTime.Now.AddDays(5),
-                InterestPerDay = 50,
+                InterestPerDay = 2,
                 Owner = client1
             });
 
             _items.Add(new ItemModel
             {
-                Name = "Ноутбук Asus",
+                Name = "Ноутбук acer",
                 Price = 12000,
                 ReceivedDate = DateTime.Now.AddDays(-20),
                 InterestFreePeriodEndDate = DateTime.Now.AddDays(-15),
                 DeathLineDate = DateTime.Now.AddDays(-1),
-                InterestPerDay = 100,
+                InterestPerDay = 2,
+                Owner = client2
+            });
+
+            _items.Add(new ItemModel 
+            {
+                Name = "IPhone 14 pro max",
+                Price = 24000,
+                ReceivedDate = DateTime.Now.AddDays(-20),
+                InterestFreePeriodEndDate = DateTime.Now.AddDays(10),
+                DeathLineDate = DateTime.Now.AddDays(10),
+                InterestPerDay = 5,
+                Owner = client1
+            });
+
+            _items.Add(new ItemModel 
+            {
+                Name = "Книга 'Володар перснів'",
+                Price = 500,
+                ReceivedDate = DateTime.Now.AddDays(-40),
+                InterestFreePeriodEndDate = DateTime.Now.AddDays(-20),
+                DeathLineDate = DateTime.Now.AddDays(-5),
+                InterestPerDay = 1,
                 Owner = client2
             });
         }
